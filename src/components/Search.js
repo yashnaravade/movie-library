@@ -12,7 +12,7 @@ function Search() {
     const handleQueryChange = (e)=>{
         setSearchQuery(e.target.value);
         setMoviesList([]);
-        axios.get(`http://www.omdbapi.com/?apikey=69dabab5&s=${e.target.value}`)
+        axios.get(`https://www.omdbapi.com/?apikey=69dabab5&s=${e.target.value}`)
         .then(response =>{
             console.log(response.data.Search)
             setMoviesList(response.data.Search)
